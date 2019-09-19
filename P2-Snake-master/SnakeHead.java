@@ -38,6 +38,8 @@ public class SnakeHead extends Actor
     if(intersects((((Realm)(getWorld())).foodRight)))
     {
       (((Realm)(getWorld())).foodRight).setLocation(Greenfoot.getRandomNumber(50)+1,Greenfoot.getRandomNumber(50)+1);
+      (((Realm)(getWorld())).foodWrong1).setLocation(Greenfoot.getRandomNumber(50)+1,Greenfoot.getRandomNumber(50)+1);
+      (((Realm)(getWorld())).foodWrong2).setLocation(Greenfoot.getRandomNumber(50)+1,Greenfoot.getRandomNumber(50)+1);
       addTail();
       ((Realm)(getWorld())).score.addPoint();
       sound = Greenfoot.getRandomNumber(4);

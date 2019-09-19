@@ -4,8 +4,8 @@ public class Realm extends World
 //Instance Variables
   public SnakeHead eli;
   public Foodrightanswer foodRight;
-  public Foodwronganswer foodWrong1; 
-  public Foodwronganswer foodWrong2; 
+  public Foodwronganswer foodWrong1;
+  public Foodwronganswer foodWrong2;
   public Score score;
   
 //Constructors
@@ -16,10 +16,10 @@ public class Realm extends World
     addObject(eli, 26, 26);
     foodRight = new Foodrightanswer();
     foodWrong1 = new Foodwronganswer();
-    foodWrong2 = new Foodwronganswer();
-    addObject(foodRight, Greenfoot.getRandomNumber(50)+1, Greenfoot.getRandomNumber(50)+1);
-    addObject(foodWrong1, Greenfoot.getRandomNumber(50)+1, Greenfoot.getRandomNumber(50)+1);
-    addObject(foodWrong2, Greenfoot.getRandomNumber(50)+1, Greenfoot.getRandomNumber(50)+1);
+    foodWrong2= new Foodwronganswer();
+    addObject(foodRight, Greenfoot.getRandomNumber(40)+1, Greenfoot.getRandomNumber(40)+5);
+    addObject(foodWrong1, Greenfoot.getRandomNumber(40)+1, Greenfoot.getRandomNumber(40)+5);
+    addObject(foodWrong2, Greenfoot.getRandomNumber(40)+1, Greenfoot.getRandomNumber(40)+5);
     score = new Score();
     addObject(score, 5, 52);
     Greenfoot.setSpeed(30);
