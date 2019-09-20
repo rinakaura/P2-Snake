@@ -5,6 +5,7 @@ public class Realm extends World
   public SnakeHead eli;
   public Food food;
   public Score score;
+  public MathProblem mathProblem;
   
 //Constructors
   public Realm()
@@ -16,6 +17,8 @@ public class Realm extends World
     addObject(food, Greenfoot.getRandomNumber(50)+1, Greenfoot.getRandomNumber(50)+1);
     score = new Score();
     addObject(score, 5, 52);
+    mathProblem = new MathProblem();
+    addObject(mathProblem, 33, 52);
     Greenfoot.setSpeed(40);
   }
   
