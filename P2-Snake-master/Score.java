@@ -1,13 +1,12 @@
 import greenfoot.*;
-
+import java.awt.Color;
 import java.awt.Graphics;
-
 public class Score extends Actor
 {
 //Instance Variables
   private int score = 0;
   private String text;
-  private int stringLength;
+  private int stringLength; 
   
 //Constructors
   public Score()
@@ -17,7 +16,7 @@ public class Score extends Actor
     setImage(new GreenfootImage(stringLength, 16));
     GreenfootImage image = getImage();
     updateImage();
-  }
+}
   
 //Methods
   public void addPoint()
@@ -25,23 +24,23 @@ public class Score extends Actor
     score += 1;
     updateImage();
     if(score == 5)
-      Greenfoot.setSpeed(41);
+      Greenfoot.setSpeed(32);
     if(score == 10)
-      Greenfoot.setSpeed(42);
+      Greenfoot.setSpeed(34);
     if(score == 20)
-      Greenfoot.setSpeed(43);
+      Greenfoot.setSpeed(36);
     if(score == 30)
-      Greenfoot.setSpeed(44);
+      Greenfoot.setSpeed(38);
     if(score == 45)
-      Greenfoot.setSpeed(45);
+      Greenfoot.setSpeed(40);
     if(score == 55)
-      Greenfoot.setSpeed(46);
+      Greenfoot.setSpeed(42);
     if(score == 70)
-      Greenfoot.setSpeed(47);
+      Greenfoot.setSpeed(44);
     if(score == 80)
-      Greenfoot.setSpeed(48);
+      Greenfoot.setSpeed(46);
     if(score == 100)
-      Greenfoot.setSpeed(49);
+      Greenfoot.setSpeed(48);
     if(score == 120)
       Greenfoot.setSpeed(50);
   }
@@ -49,6 +48,6 @@ public class Score extends Actor
   {
     GreenfootImage image = getImage();
     image.clear();
-    image.drawString(text + score, 10, 14);
+    image.drawString(text + score, 1, 14);
   }
 }
