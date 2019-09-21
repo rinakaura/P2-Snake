@@ -1,6 +1,7 @@
 import greenfoot.*;
-import java.awt.Color;
+
 import java.awt.Graphics;
+
 public class Score extends Actor
 {
 //Instance Variables
@@ -48,6 +49,6 @@ public class Score extends Actor
   {
     GreenfootImage image = getImage();
     image.clear();
-    image.drawString(text + score, 1, 14);
+    image.drawString(text + score, 10, 14);
   }
 }
