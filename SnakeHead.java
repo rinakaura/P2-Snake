@@ -34,23 +34,26 @@ public class SnakeHead extends Actor
       setLocation(getX(), getY()+1);
     else if(getRotation() == 270)
       setLocation(getX()-1, getY());
-    if(intersects((((Realm)(getWorld())).food)))
-    {
-      (((Realm)(getWorld())).food).setLocation(Greenfoot.getRandomNumber(50)+1,Greenfoot.getRandomNumber(50)+1);
-      addTail();
-      ((Realm)(getWorld())).score.addPoint();
-      sound = Greenfoot.getRandomNumber(4);
-      if(sound == 0)
-        Greenfoot.playSound("chew1.wav");
-      else if(sound == 1)
-        Greenfoot.playSound("chew2.wav");
-      else if(sound == 2)
-        Greenfoot.playSound("chew3.wav");
-      else if(sound == 3)
-        Greenfoot.playSound("chew4.wav");
-    }
+      
     if(next != null)
       next.move(x,y,rotation);
+    
+    Food[] foods = ((Realm)getWorld()).foods;
+    for (int i=0; i < foods.length; i++)
+    {
+        if (intersects(foods[i])) 
+        {
+            if (foods[i].getNum() == ((Realm)getWorld()).mathProblem.getCorrectAnswer())
+            {
+                ((Realm)getWorld()).placeFoods();
+                addTail();
+                ((Realm)(getWorld())).score.addPoint();
+            } else {
+                ((Realm)(getWorld())).gameOver();
+                return;
+            }
+        }
+    }
   }   
   public void addTail()
   {

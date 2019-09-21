@@ -24,5 +24,14 @@ public class MathProblem extends Actor
     public int getCorrectAnswer()
     {
         return num1 + num2;
-    }    
+    }
+    
+    public void refresh()
+    {
+        num1 = Greenfoot.getRandomNumber(99);
+        num2 = Greenfoot.getRandomNumber(99);
+        text = "What is the Sum of " + num1 + " and " + num2 + " ?";
+        getImage().clear();
+        getImage().drawString(text, 1, 14);
+    }
 }
